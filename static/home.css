@@ -1,0 +1,248 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding-top: 100px;
+  font-family: Tahoma;
+  background-color: #FAF8F5;
+}
+.header{
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  flex-direction: row;
+  background-color: burlywood;
+  border-bottom: 0.5px solid rgb(114, 65, 65);
+  position: fixed;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+.left-section{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 30px;
+  margin-right: 25px;
+}
+.company-logo{
+  width: 80px;
+  height: 80px;
+  border: 0.5px solid rgb(114, 65, 65);
+  border-radius: 50px;
+}
+.company-name{
+  font-family: Tahoma;
+  color: rgb(114, 65, 65);
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 17px;
+}
+.right-section{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 40px;
+  justify-content: flex-end;
+  gap: 7px;
+}
+.right-section button{
+  background-color: rgb(114, 65, 65);
+  color: whitesmoke;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.right-section a{
+  text-decoration:none;
+  color:#5f4034;
+  font-weight:600;
+  transition:.3s;
+}
+
+.right-section a:hover{
+  color:#c28b44;
+}
+
+.home:hover,
+.mencollection:hover,
+.womencollection:hover,
+.about:hover{
+  opacity: 0.75;
+  padding: 8px 16px;
+}
+.home:active,
+.mencollection:active,
+.womencollection:active,
+.about:active{
+  opacity: 0.5;
+}
+
+.footer{
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35px;
+  flex-direction: row;
+  background-color: burlywood;
+  border-top: 0.5px solid rgb(114, 65, 65);
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+.footer-section-text{
+  font-family: Tahoma;
+  color: rgb(114, 65, 65);
+  font-size: 18px;
+  padding-left: 17px;
+}
+.right-footer{
+  margin-right: 50px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.connect,
+.customer-care{
+  position: relative;
+  display: inline-block;
+}
+.connect-img{
+  width: 25px;
+  height: 25px;
+  border: 0.5px solid rgb(114, 65, 65);
+  border-radius: 15px;
+}
+.customer-care-img{
+  width: 25px;
+  height: 25px;
+  border: 0.5px solid rgb(114, 65, 65);
+  border-radius: 15px;
+}
+.connect .tooltip ,
+.customer-care .tooltip{
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  top: -30px;
+  opacity: 0;
+  transition: 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.connect:hover .tooltip,
+.customer-care:hover .tooltip{
+  opacity: 1;
+}
+
+.part1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 670px;
+
+}
+.part1-left{
+  align-items: center;
+  background-color: #FAF8F5;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  color: #3D2C2A;
+  padding: 80px 70px;
+}
+.part1-left h1{
+  font-size: 56px;
+  font-weight: bold;
+}
+.part1-left p{
+  font-size: 14px;
+  margin-top: 24px;
+  max-width: 320px;
+}
+.part1-right{
+  display: block;
+  unicode-bidi: isolate;
+}
+.part1-right img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collections{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 80px 8%;
+}
+.card {
+    background: rgb(114, 65, 65);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, .5);
+    transition: .3s;
+    color: whitesmoke;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    
+}
+.card:hover{
+  opacity: 0.8;
+  width: 615px;
+}
+.card:active{
+  opacity: 0.7;
+}
+.left-card{
+  padding: 40px;
+}
+.card h2{
+  display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.card p{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.right-card{
+  padding-top: 15px;
+  padding-right: 20px;
+}
+.card img{
+  width: 150px;
+  height: 150px;
+}
+.collections a{
+  text-decoration: none;
+  color: #FAF8F5;
+}
