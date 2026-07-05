@@ -1,3 +1,6 @@
+*{
+  font-family: Tahoma;
+}
 .header{
   display: flex;
   top: 0;
@@ -46,6 +49,9 @@
   font-weight: 600;
   margin: 0;
   padding-top: 7px;
+}
+.center-section p{
+  font-size: 17px;
 }
 .right-section{
   display: flex;
@@ -162,6 +168,13 @@
   margin-top: 108px;
   margin-bottom: 55px;
 }
+.heading{
+  background-color: #5f4034;
+  color: whitesmoke;
+  padding: 8px 20px;
+  font-size: 40px;
+  border-radius: 5px;
+}
 .cloth-section{
   margin-top: 8px;
   margin-left: 10px;
@@ -208,3 +221,4 @@
   font-weight: 600;
   padding-bottom: 5px;
 }
+
