@@ -141,6 +141,11 @@
   opacity: 1;
 }
 
+body{
+    margin:0;
+    background:#f8f6f2;
+    font-family:Tahoma,sans-serif;
+}
     .about-hero {
       height: 60vh;
       background: #1a1a1a;
