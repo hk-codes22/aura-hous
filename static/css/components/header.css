@@ -1,0 +1,72 @@
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255, 255, 255, .92); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  transition: box-shadow .3s var(--ease);
+}
+.site-header.scrolled { box-shadow: var(--shadow-md); }
+.header-inner {
+  max-width: var(--container); margin: 0 auto; padding: 0 24px; height: var(--header-h);
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.company-logo { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); }
+.company-name { font-family: var(--font-head); font-size: 42px; font-weight: 700; color: var(--brand); letter-spacing: .3px; }
+
+.main-nav { display: flex; align-items: center; gap: 4px; }
+.main-nav a {
+  position: relative; text-decoration: none; font-weight: 500; font-size: 15px;
+  padding: 8px 14px; border-radius: 999px; transition: color .25s;
+}
+.main-nav a::after {
+  content: ''; position: absolute; left: 14px; right: 14px; bottom: 3px; height: 2px;
+  background: var(--accent); transform: scaleX(0); transition: transform .3s var(--ease);
+}
+.main-nav a:hover { color: var(--brand); }
+.main-nav a:hover::after, .main-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.main-nav a[aria-current="page"] { color: var(--brand); font-weight: 600; }
+
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.cart-btn, .nav-toggle {
+  position: relative; display: grid; place-items: center; width: 44px; height: 44px;
+  border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--brand);
+  cursor: pointer; transition: background .25s, color .25s, transform .2s;
+}
+.cart-btn:hover, .nav-toggle:hover { background: var(--brand); color: #fff; }
+.cart-btn:active { transform: scale(.94); }
+.cart-btn svg, .nav-toggle svg { width: 22px; height: 22px; }
+.cart-count {
+  position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 5px;
+  border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700;
+  display: grid; place-items: center; transform: scale(0); transition: transform .3s var(--ease);
+}
+.cart-count.has-items { transform: scale(1); }
+.cart-count.bump { animation: bump .4s var(--ease); }
+@keyframes bump { 50% { transform: scale(1.4); } }
+.nav-toggle { display: none; }
+
+@media (max-width: 768px) {
+  .nav-toggle { display: grid; }
+  .company-name { font-size: 22px; }
+  .main-nav {
+    position: absolute; top: var(--header-h); left: 0; right: 0; flex-direction: column; align-items: stretch;
+    background: var(--surface); padding: 12px 24px 20px; border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow-md); transform: translateY(-12px); opacity: 0; visibility: hidden; transition: .3s var(--ease);
+  }
+  .nav-open .main-nav { transform: none; opacity: 1; visibility: visible; }
+  .main-nav a { padding: 14px 8px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .main-nav a::after { display: none; }
+}
+@media (max-width: 480px) {
+  .header-inner { padding: 0 16px; }
+  .company-name { font-size: 19px; }
+}
+
+/* Wishlist heart in header shares the round button look; its count badge matches the bag's. */
+.cart-btn .wish-count, .wish-count {
+  position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 5px;
+  border-radius: 999px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700;
+  display: grid; place-items: center; transform: scale(0); transition: transform .3s var(--ease);
+}
+.wish-count.has-items { transform: scale(1); }
+.wish-count.bump { animation: bump .4s var(--ease); }

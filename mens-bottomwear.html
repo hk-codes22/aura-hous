@@ -1,53 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <title>Men Fashion</title>
+    <link rel="stylesheet" href="static/css/base/tokens.css">
+    <link rel="stylesheet" href="static/css/base/base.css">
+    <link rel="stylesheet" href="static/css/components/announcement.css">
+    <link rel="stylesheet" href="static/css/components/header.css">
+    <link rel="stylesheet" href="static/css/components/footer.css">
+    <link rel="stylesheet" href="static/css/components/buttons.css">
+    <link rel="stylesheet" href="static/css/components/section.css">
+    <link rel="stylesheet" href="static/css/components/cart.css">
+    <link rel="stylesheet" href="static/css/components/product-card.css">
     <link rel="stylesheet" href="static/product-page.css">
   </head>
-  <body>
-    <header class="header">
-      <div class="left-section">
-        <img class="company-logo" src="images/comapny-logo.jpg">
-        <div class="company-name">Aura Hous</div>
-      </div>
-      <div class="center-section">
-        <div>Men's Fashion</div>
-        <p>Unfold Your Aura Through Style</p>
-      </div>
-      <div class="right-section">
-        <button class="home" onclick="window.location.href='home.html'">Home</button>
-        <button class="mencollection" onclick="window.location.href='men-collection.html'">Men</button>
-        <button class="womencollection" onclick="window.location.href='women-collection.html'">Women</button>
-        <button class="about" onclick="window.location.href='about-us.html'">About</button>
+  <body class="page-mens-bottomwear">
+    <div class="announcement">Free shipping on all orders &nbsp;·&nbsp; <strong>Easy 7-day returns</strong></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="home.html">
+          <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+          <span class="company-name">Aura Hous</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+        <a href="home.html">Home</a>
+        <a href="men-collection.html" aria-current="page">Men</a>
+        <a href="women-collection.html">Women</a>
+        <a href="new-arrivals.html">New Arrivals</a>
+        <a href="about-us.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-btn wish-btn-header" type="button" data-wish-open aria-label="Open wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.5-9.2C1.3 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.7C12 6.2 13.5 5 15.5 5 19 5 20.7 8.6 19.5 11.8 19.5 11.8 12 21 12 21z"/></svg>
+            <span class="wish-count" aria-live="polite">0</span>
+          </button>
+          <button class="cart-btn" type="button" data-cart-open aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            <span class="cart-count" aria-live="polite">0</span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
-    <footer class="footer">
-      <div class="footer-section-text">
-        Every Outfit Carries an Aura of Confidence
-      </div>
-      <div class="right-footer">
-        <div class="connect">
-          <a href="connect.html">
-            <img class="connect-img" src="images/connect.png">
-            <div class="tooltip">Connect to our<br>socialmedia</div>
-          </a>
-        </div>
-        <div class="customer-care">
-          <a href="customer-care.html">
-            <img class="customer-care-img" src="images/customer-care.png">
-            <div class="tooltip">Customer<br>care</div>
-          </a>
-        </div>
-      </div>
-    </footer>
+    <section class="page-banner">
+      <h2>Men's Fashion</h2>
+      <p>Unfold Your Aura Through Style</p>
+    </section>
 
     <main class="main-body">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="home.html">Home</a><span><a href="men-collection.html">Men</a></span><span aria-current="page">Men's Bottom-Wear</span></nav>
       <div class="heading">Men's Bottom-Wear</div>
+      <div class="listing-bar">
+        <nav class="pills" aria-label="Categories"><a href="mens-topwear.html">Top-Wear</a><a href="mens-bottomwear.html" aria-current="page">Bottom-Wear</a><a href="mens-formalwear.html">Formal-Wear</a><a href="mens-winterwear.html">Winter-Wear</a></nav>
+        <div class="listing-tools"><span class="result-count"></span><label>Sort by
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label></div>
+      </div>
 
       <section class="cloth-section">
         <div class="product">
-          <img src="images/men/bottom-wear/baggy-jeans.jpg">
+          <img src="images/men/bottom-wear/baggy-jeans.jpg" alt="Baggy Jeans" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Baggy Jeans</div>
             <div class="description">Crafted for a comfortable fit that complements your everyday look</div>
@@ -55,7 +79,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/baggy-pant.webp">
+          <img src="images/men/bottom-wear/baggy-pant.webp" alt="Baggy Pants" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Baggy Pants</div>
             <div class="description">Crafted for a relaxed silhouette without compromising on style</div>
@@ -63,7 +87,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/bell-bottom-denim.webp">
+          <img src="images/men/bottom-wear/bell-bottom-denim.webp" alt="Bell-Bottom Jeans" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Bell-Bottom Jeans</div>
             <div class="description">Crafted for a relaxed silhouette without compromising on style</div>
@@ -71,7 +95,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/bootcut-denim.jpg">
+          <img src="images/men/bottom-wear/bootcut-denim.jpg" alt="Bootcut Jeans" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Bootcut Jeans</div>
             <div class="description">Premium denim with a comfortable fit and subtle flare for a polished finish</div>
@@ -79,7 +103,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/bootcut-pant.webp">
+          <img src="images/men/bottom-wear/bootcut-pant.webp" alt="Bootcut Pant" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Bootcut Pant</div>
             <div class="description">Designed to provide a balanced fit with a classic bootcut shape</div>
@@ -87,7 +111,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/cargo.webp">
+          <img src="images/men/bottom-wear/cargo.webp" alt="Cargo Pant" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Cargo Pant</div>
             <div class="description">A stylish cargo design that blends urban fashion with all-day comfort</div>
@@ -95,7 +119,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/loose-fit-washed-jeans.webp">
+          <img src="images/men/bottom-wear/loose-fit-washed-jeans.webp" alt="Washed Jeans" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Washed Jeans</div>
             <div class="description">Faded denim with a relaxed fit for a timeless, laid-back look</div>
@@ -103,7 +127,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/shorts.webp">
+          <img src="images/men/bottom-wear/shorts.webp" alt="Shorts" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Shorts</div>
             <div class="description">A wardrobe essential that combines comfort, durability, and modern style</div>
@@ -111,7 +135,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/trackpant.webp">
+          <img src="images/men/bottom-wear/trackpant.webp" alt="Track Pant" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Track Pant</div>
             <div class="description">Soft, durable track pants that keep you comfortable wherever you go</div>
@@ -119,7 +143,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/men/bottom-wear/formal-regular-pant.avif">
+          <img src="images/men/bottom-wear/formal-regular-pant.avif" alt="Regular Formal Pant" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Regular Formal Pant</div>
             <div class="description">A clean, regular fit that offers comfort without compromising sophistication</div>
@@ -129,5 +153,38 @@
       </section>
     </main>
 
+      <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="home.html">
+            <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+            <span class="company-name">Aura Hous</span>
+          </a>
+          <p>Every Outfit Carries an Aura of Confidence</p>
+        </div>
+        <div><h4>Shop</h4><ul>
+          <li><a href="men-collection.html">Men</a></li>
+          <li><a href="women-collection.html">Women</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+        </ul></div>
+        <div><h4>Help</h4><ul>
+          <li><a href="customer-care.html">Customer Care</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="connect.html">Social Media</a></li>
+        </ul></div>
+        <div><h4>Connect</h4>
+          <div class="footer-social">
+            <a href="connect.html" aria-label="Connect to our social media"><img src="images/connect.png" alt="Social media"></a>
+            <a href="customer-care.html" aria-label="Customer care"><img src="images/customer-care.png" alt="Customer care"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="static/js/header.js"></script>
+    <script src="static/js/reveal.js"></script>
+    <script src="static/js/cart.js"></script>
+    <script src="static/js/wishlist.js"></script>
+    <script src="static/js/products.js"></script>
+    <script src="static/js/listing.js"></script>
   </body>
 </html>

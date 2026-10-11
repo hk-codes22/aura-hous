@@ -1,0 +1,15 @@
+/* Buttons. Use .btn for primary, add .btn-outline for secondary. */
+.btn, .hero button, .hero-text button, .newsletter button {
+  display: inline-block; text-decoration: none; cursor: pointer; text-align: center;
+  background: var(--brand); color: #fff; border: 1.5px solid var(--brand); border-radius: 999px;
+  padding: 14px 32px; font: 600 15px var(--font-body);
+  transition: background .25s, color .25s, transform .25s var(--ease), box-shadow .25s;
+}
+.btn:hover, .hero button:hover, .hero-text button:hover, .newsletter button:hover {
+  background: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-2px); box-shadow: var(--shadow-md);
+}
+.btn:active { transform: translateY(0); }
+.btn-outline { background: transparent; color: var(--brand); }
+.btn-outline:hover { background: var(--brand); color: #fff; }
+.btn-light { background: #fff; color: var(--brand-dark); border-color: #fff; }
+.btn-light:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--brand-dark); }

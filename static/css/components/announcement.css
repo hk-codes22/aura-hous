@@ -1,0 +1,6 @@
+/* Thin promo bar above the header. */
+.announcement {
+  background: var(--brand-darker); color: #f1e4d6;
+  text-align: center; font-size: 13px; letter-spacing: .5px; padding: 9px 16px;
+}
+.announcement strong { color: var(--accent); font-weight: 600; }

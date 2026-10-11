@@ -1,91 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <title>Aura Hous</title>
+    <link rel="stylesheet" href="static/css/base/tokens.css">
+    <link rel="stylesheet" href="static/css/base/base.css">
+    <link rel="stylesheet" href="static/css/components/announcement.css">
+    <link rel="stylesheet" href="static/css/components/header.css">
+    <link rel="stylesheet" href="static/css/components/footer.css">
+    <link rel="stylesheet" href="static/css/components/buttons.css">
+    <link rel="stylesheet" href="static/css/components/section.css">
+    <link rel="stylesheet" href="static/css/components/cart.css">
+    <link rel="stylesheet" href="static/css/components/product-card.css">
     <link rel="stylesheet" href="static/home.css">
   </head>
-  <body>
-    <header class="header">
-      <div class="left-section">
-        <img class="company-logo" src="images/comapny-logo.jpg">
-        <div class="company-name">Aura Hous</div>
-      </div>
-      <div class="right-section">
-        <button class="home" onclick="window.location.href='home.html'">Home</button>
-        <button class="mencollection" onclick="window.location.href='men-collection.html'">Men</button>
-        <button class="womencollection" onclick="window.location.href='women-collection.html'">Women</button>
-        <button class="about" onclick="window.location.href='about-us.html'">About</button>
+  <body class="page-home">
+    <div class="announcement">Free shipping on all orders &nbsp;·&nbsp; <strong>Easy 7-day returns</strong></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="home.html">
+          <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+          <span class="company-name">Aura Hous</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+        <a href="home.html" aria-current="page">Home</a>
+        <a href="men-collection.html">Men</a>
+        <a href="women-collection.html">Women</a>
+        <a href="new-arrivals.html">New Arrivals</a>
+        <a href="about-us.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-btn wish-btn-header" type="button" data-wish-open aria-label="Open wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.5-9.2C1.3 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.7C12 6.2 13.5 5 15.5 5 19 5 20.7 8.6 19.5 11.8 19.5 11.8 12 21 12 21z"/></svg>
+            <span class="wish-count" aria-live="polite">0</span>
+          </button>
+          <button class="cart-btn" type="button" data-cart-open aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            <span class="cart-count" aria-live="polite">0</span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
       </div>
     </header>
-
-    <footer class="footer">
-      <div class="footer-section-text">
-        Every Outfit Carries an Aura of Confidence
-      </div>
-      <div class="right-footer">
-        <div class="connect">
-          <a href="connect.html">
-            <img class="connect-img" src="images/connect.png">
-            <div class="tooltip">Connect to our<br>socialmedia</div>
-          </a>
+    <main>
+      <section class="hero-home">
+        <div class="hero-copy">
+          <h1>Dressed For <em>Every Moment</em></h1>
+          <p>Clothing built on clean cuts, honest fabrics, and a quiet confidence that speaks without trying</p>
         </div>
-        <div class="customer-care">
-          <a href="customer-care.html">
-            <img class="customer-care-img" src="images/customer-care.png">
-            <div class="tooltip">Customer<br>care</div>
+        <div class="hero-visual">
+          <img src="images/homepage.jpg" alt="Models wearing Aura Hous seasonal styles">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><div><h2>Shop by Collection</h2></div></div>
+        <div class="category-grid">
+          <a class="category-card" href="men-collection.html"><img src="images/male-fashion-1.jpg" alt="Men's collection" loading="lazy"><div><h3>Men</h3><p>Modern essentials</p></div></a>
+          <a class="category-card" href="women-collection.html"><img src="images/female-fashion-2.webp" alt="Women's collection" loading="lazy"><div><h3>Women</h3><p>Elegant everyday wear</p></div></a>
+          <a class="category-card" href="new-arrivals.html"><img src="images/female-fashion-1.webp" alt="New arrivals" loading="lazy"><div><h3>New Arrivals</h3><p>Fresh seasonal collections</p></div></a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head"><div><h2>Fresh Arrivals</h2></div><a class="link-arrow" href="new-arrivals.html">View all</a></div>
+        <div class="cloth-section">
+        <div class="product">
+          <img src="images/new-arrivals/checked-men-shirt.webp" alt="Checked Men's Shirt" loading="lazy" width="560" height="700">
+          <div class="product-details">
+            <div class="name">Checked Men's Shirt</div>
+            <div class="description">A versatile checked shirt that pairs perfectly with jeans or chinos</div>
+            <div class="price">Price : Rs 1500</div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/new-arrivals/cotton-shirt.jpg" alt="Cotton Shirt" loading="lazy" width="560" height="700">
+          <div class="product-details">
+            <div class="name">Cotton Shirt</div>
+            <div class="description">Crafted from soft, breathable fabric for all-day comfort and confidence</div>
+            <div class="price">Price : Rs 1300</div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/new-arrivals/off-shoulder-top.webp" alt="Off-Shoulder Top" loading="lazy" width="560" height="700">
+          <div class="product-details">
+            <div class="name">Off-Shoulder Top</div>
+            <div class="description">A trendy top that blends comfort with effortless sophistication</div>
+            <div class="price">Price : Rs 900</div>
+          </div>
+        </div>
+        <div class="product">
+          <img src="images/new-arrivals/regular-fit-top.jpg" alt="Regular-Fit Top" loading="lazy" width="560" height="700">
+          <div class="product-details">
+            <div class="name">Regular-Fit Top</div>
+            <div class="description">A wardrobe staple that's ideal for casual outings, brunches, and evening plans</div>
+            <div class="price">Price : Rs 700</div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="promo-band">
+        <div class="promo-band-inner">
+          <div><h2>Every Outfit Carries an Aura of Confidence</h2><p>Discover pieces made to be worn on repeat, in fabrics that feel as good as they look.</p></div>
+          <div class="promo-actions"><a class="btn btn-light" href="men-collection.html">Shop Men</a><a class="btn btn-outline" href="women-collection.html">Shop Women</a></div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Our promise">
+        <div><strong>Free Shipping</strong>On every order</div>
+        <div><strong>Easy Returns</strong>Simple, hassle-free policy</div>
+        <div><strong>Secure Payments</strong>Multiple safe options</div>
+        <div><strong>Quality Fabrics</strong>Built to last</div>
+      </section>
+
+      <section class="newsletter-band">
+        <h2>Join the Aura Hous list</h2>
+        <p>Early access to new collections, offers and styling ideas.</p>
+        <form class="newsletter-form">
+          <input type="email" required placeholder="Enter your email" aria-label="Email address">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="home.html">
+            <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+            <span class="company-name">Aura Hous</span>
           </a>
+          <p>Every Outfit Carries an Aura of Confidence</p>
+        </div>
+        <div><h4>Shop</h4><ul>
+          <li><a href="men-collection.html">Men</a></li>
+          <li><a href="women-collection.html">Women</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+        </ul></div>
+        <div><h4>Help</h4><ul>
+          <li><a href="customer-care.html">Customer Care</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="connect.html">Social Media</a></li>
+        </ul></div>
+        <div><h4>Connect</h4>
+          <div class="footer-social">
+            <a href="connect.html" aria-label="Connect to our social media"><img src="images/connect.png" alt="Social media"></a>
+            <a href="customer-care.html" aria-label="Customer care"><img src="images/customer-care.png" alt="Customer care"></a>
+          </div>
         </div>
       </div>
     </footer>
-
-    <section class="part1">
-      <div class="part1-left">
-        <h1>Dressed For 
-          <br>
-          Every Moment
-        </h1>
-        <p>Clothing built on clean cuts, honest fabrics, and a quiet confidence that speaks without trying</p>
-      </div>
-      <div class="part1-right">
-        <img src="images/homepage.jpg">
-      </div>
-    </section>
-
-    <section class="collections">
-      <a href="men-collection.html">
-        <div class="card">
-          <div class="left-card">
-              <h2>Men</h2>
-            <p>Modern essentials</p>
-          </div>
-          <div class="right-card">
-            <img src="images/male-fashion-1.jpg">
-          </div>
-        </div>
-      </a>
-      <a href="women-collection.html">
-        <div class="card">
-          <div class="left-card">
-              <h2>Women</h2>
-            <p>Elegent everyday wear</p>
-          </div>
-          <div class="right-card">
-            <img src="images/female-fashion-2.webp">
-          </div>
-        </div>
-      </a>
-
-      <a href="new-arrivals.html">
-        <div class="card">
-          <div class="left-card">
-              <h2>New Arrivals</h2>
-            <p>Fresh seasonal collections</p>
-          </div>
-          <div class="right-card">
-            <img src="images/female-fashion-1.webp">
-          </div>
-        </div>
-      </a>
-    </section>
+    <script src="static/js/header.js"></script>
+    <script src="static/js/reveal.js"></script>
+    <script src="static/js/cart.js"></script>
+    <script src="static/js/wishlist.js"></script>
+    <script src="static/js/products.js"></script>
+    <script src="static/js/newsletter.js"></script>
   </body>
 </html>

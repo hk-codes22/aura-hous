@@ -1,0 +1,42 @@
+/* Slide-in shopping bag drawer and toast message. Markup is built by js/cart.js. */
+.cart-overlay, .wish-overlay { position: fixed; inset: 0; background: rgba(30, 15, 13, .5); opacity: 0; visibility: hidden; transition: .3s; z-index: 1900; }
+.cart-drawer, .wish-drawer {
+  position: fixed; top: 0; right: 0; height: 100%; width: min(420px, 100%); background: var(--surface); z-index: 2000;
+  display: flex; flex-direction: column; transform: translateX(100%); visibility: hidden;
+  transition: transform .4s var(--ease), visibility .4s;
+}
+.cart-open .cart-drawer, .wish-open .wish-drawer { transform: none; visibility: visible; box-shadow: -10px 0 40px rgba(0,0,0,.15); }
+.cart-open .cart-overlay, .wish-open .wish-overlay { opacity: 1; visibility: visible; }
+.cart-head, .wish-head { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid var(--line); }
+.cart-head h3, .wish-head h3 { margin: 0; font-size: 22px; }
+.cart-close, .wish-close { border: 0; background: none; font-size: 28px; cursor: pointer; color: var(--muted); line-height: 1; }
+.cart-items, .wish-items { flex: 1; overflow-y: auto; padding: 8px 24px; }
+.cart-empty, .wish-empty { text-align: center; color: var(--muted); padding: 60px 0; }
+.cart-item, .wish-item { display: grid; grid-template-columns: 72px 1fr auto; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.cart-item img, .wish-item img { width: 72px; height: 90px; object-fit: cover; border-radius: 8px; }
+.cart-item h4, .wish-item h4 { margin: 0 0 4px; font-size: 15px; }
+.cart-item .qty { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 999px; margin-top: 6px; }
+.cart-item .qty button { width: 28px; height: 28px; border: 0; background: none; cursor: pointer; font-size: 16px; color: var(--brand); }
+.cart-item .qty span { min-width: 22px; text-align: center; font-size: 14px; }
+.cart-item .remove, .wish-item .remove { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 13px; text-decoration: underline; }
+.cart-foot, .wish-foot { padding: 20px 24px 28px; border-top: 1px solid var(--line); }
+.cart-total { display: flex; justify-content: space-between; font-size: 18px; font-weight: 700; margin-bottom: 14px; }
+.cart-foot .btn, .wish-foot .btn { width: 100%; }
+
+.toast {
+  position: fixed; left: 50%; bottom: 28px; z-index: 2100; background: var(--brand-darker); color: #fff;
+  padding: 12px 22px; border-radius: 999px; font-size: 14px; box-shadow: var(--shadow-md);
+  transform: translate(-50%, 120px); opacity: 0; visibility: hidden;
+  transition: transform .4s var(--ease), opacity .3s, visibility .3s;
+}
+.toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+.cart-open .toast, .wish-open .toast { display: none; }
+
+/* Wishlist rows: small "Add to Bag" button under the price */
+.wish-add {
+  margin-top: 8px; padding: 7px 16px; border-radius: 999px; cursor: pointer;
+  border: 1.5px solid var(--brand); background: transparent; color: var(--brand);
+  font: 600 13px var(--font-body); transition: background .25s, color .25s;
+}
+.wish-add:hover { background: var(--brand); color: #fff; }
+.wish-add.added { background: var(--success); border-color: var(--success); color: #fff; }

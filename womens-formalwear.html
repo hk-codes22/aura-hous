@@ -1,53 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <title>Women Fashion</title>
+    <link rel="stylesheet" href="static/css/base/tokens.css">
+    <link rel="stylesheet" href="static/css/base/base.css">
+    <link rel="stylesheet" href="static/css/components/announcement.css">
+    <link rel="stylesheet" href="static/css/components/header.css">
+    <link rel="stylesheet" href="static/css/components/footer.css">
+    <link rel="stylesheet" href="static/css/components/buttons.css">
+    <link rel="stylesheet" href="static/css/components/section.css">
+    <link rel="stylesheet" href="static/css/components/cart.css">
+    <link rel="stylesheet" href="static/css/components/product-card.css">
     <link rel="stylesheet" href="static/product-page.css">
   </head>
-  <body>
-    <header class="header">
-      <div class="left-section">
-        <img class="company-logo" src="images/comapny-logo.jpg">
-        <div class="company-name">Aura Hous</div>
-      </div>
-      <div class="center-section">
-        <div>Women's Fashion</div>
-        <p>A World of Sophisticated Style Awaits</p>
-      </div>
-      <div class="right-section">
-        <button class="home" onclick="window.location.href='home.html'">Home</button>
-        <button class="mencollection" onclick="window.location.href='men-collection.html'">Men</button>
-        <button class="womencollection" onclick="window.location.href='women-collection.html'">Women</button>
-        <button class="about" onclick="window.location.href='about-us.html'">About</button>
+  <body class="page-womens-formalwear">
+    <div class="announcement">Free shipping on all orders &nbsp;·&nbsp; <strong>Easy 7-day returns</strong></div>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="home.html">
+          <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+          <span class="company-name">Aura Hous</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+        <a href="home.html">Home</a>
+        <a href="men-collection.html">Men</a>
+        <a href="women-collection.html" aria-current="page">Women</a>
+        <a href="new-arrivals.html">New Arrivals</a>
+        <a href="about-us.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-btn wish-btn-header" type="button" data-wish-open aria-label="Open wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-9.5-9.2C1.3 8.6 3 5 6.5 5c2 0 3.5 1.2 4.5 2.7C12 6.2 13.5 5 15.5 5 19 5 20.7 8.6 19.5 11.8 19.5 11.8 12 21 12 21z"/></svg>
+            <span class="wish-count" aria-live="polite">0</span>
+          </button>
+          <button class="cart-btn" type="button" data-cart-open aria-label="Open shopping bag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1 13H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+            <span class="cart-count" aria-live="polite">0</span>
+          </button>
+          <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
       </div>
     </header>
 
-    <footer class="footer">
-      <div class="footer-section-text">
-        Every Outfit Carries an Aura of Confidence
-      </div>
-      <div class="right-footer">
-        <div class="connect">
-          <a href="connect.html">
-            <img class="connect-img" src="images/connect.png">
-            <div class="tooltip">Connect to our<br>socialmedia</div>
-          </a>
-        </div>
-        <div class="customer-care">
-          <a href="customer-care.html">
-            <img class="customer-care-img" src="images/customer-care.png">
-            <div class="tooltip">Customer<br>care</div>
-          </a>
-        </div>
-      </div>
-    </footer>
+    <section class="page-banner">
+      <h2>Women's Fashion</h2>
+      <p>A World of Sophisticated Style Awaits</p>
+    </section>
 
     <main class="main-body">
+      <nav class="breadcrumb" aria-label="Breadcrumb"><a href="home.html">Home</a><span><a href="women-collection.html">Women</a></span><span aria-current="page">Women's Formal Wear</span></nav>
       <div class="heading">Women's Formal Wear</div>
+      <div class="listing-bar">
+        <nav class="pills" aria-label="Categories"><a href="womens-topwear.html">Top-Wear</a><a href="womens-bottomwear.html">Bottom-Wear</a><a href="womens-dresses.html">Dresses</a><a href="womens-formalwear.html" aria-current="page">Formal-Wear</a><a href="womens-winterwear.html">Winter-Wear</a></nav>
+        <div class="listing-tools"><span class="result-count"></span><label>Sort by
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label></div>
+      </div>
 
       <section class="cloth-section">
         <div class="product">
-          <img src="images/women/formal-wear/blazer.jpg">
+          <img src="images/women/formal-wear/blazer.jpg" alt="Blazer" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Blazer</div>
             <div class="description">Crafted to office look with exceptional comfort</div>
@@ -55,7 +79,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/bootcut-trauser.webp">
+          <img src="images/women/formal-wear/bootcut-trauser.webp" alt="BootCut Trauser" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">BootCut Trauser</div>
             <div class="description">Lightweight fabric for all-day comfort</div>
@@ -63,7 +87,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/formal-top.webp">
+          <img src="images/women/formal-wear/formal-top.webp" alt="Formal Top" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Formal Top</div>
             <div class="description">Soft, breathable fabric with a comfortable fit and elegant finish</div>
@@ -71,7 +95,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/high-waist-trauser.webp">
+          <img src="images/women/formal-wear/high-waist-trauser.webp" alt="High Waist Trauser" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">High Waist Trauser</div>
             <div class="description">A timeless wardrobe essential for brunches, vacations, and evening plans</div>
@@ -79,7 +103,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/pencil-skirt.jpg">
+          <img src="images/women/formal-wear/pencil-skirt.jpg" alt="Pencil Skirt" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Pencil Skirt</div>
             <div class="description">Designed to deliver confidence with a modern, stylish finish</div>
@@ -87,7 +111,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/regular-fit-shirt.jpg">
+          <img src="images/women/formal-wear/regular-fit-shirt.jpg" alt="Regular Fit Shirt" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Regular Fit Shirt</div>
             <div class="description">A design that combines comfort with timeless elegance</div>
@@ -95,7 +119,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/relaxed-trauser.webp">
+          <img src="images/women/formal-wear/relaxed-trauser.webp" alt="Relaxed Trauser" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Relaxed Trauser</div>
             <div class="description">A silhouette that creates an effortlessly fashionable look</div>
@@ -103,7 +127,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/slim-fit-shirt.jpg">
+          <img src="images/women/formal-wear/slim-fit-shirt.jpg" alt="Slim fit Shirt" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Slim fit Shirt</div>
             <div class="description">A wardrobe essential that blends sophistication with modern fashion</div>
@@ -111,7 +135,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/top.webp">
+          <img src="images/women/formal-wear/top.webp" alt="Women's Top" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Women's Top</div>
             <div class="description">Designed to deliver confidence with everyday comfort</div>
@@ -119,7 +143,7 @@
           </div>
         </div>
         <div class="product">
-          <img src="images/women/formal-wear/waistcoat.webp">
+          <img src="images/women/formal-wear/waistcoat.webp" alt="Waistcoat" loading="lazy" width="560" height="700">
           <div class="product-details">
             <div class="name">Waistcoat</div>
             <div class="description">A perfect office wear designed with soft comfortable cloth </div>
@@ -128,5 +152,38 @@
         </div>
       </section>
     </main>
+      <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="home.html">
+            <img class="company-logo" src="images/comapny-logo.jpg" alt="Aura Hous logo">
+            <span class="company-name">Aura Hous</span>
+          </a>
+          <p>Every Outfit Carries an Aura of Confidence</p>
+        </div>
+        <div><h4>Shop</h4><ul>
+          <li><a href="men-collection.html">Men</a></li>
+          <li><a href="women-collection.html">Women</a></li>
+          <li><a href="new-arrivals.html">New Arrivals</a></li>
+        </ul></div>
+        <div><h4>Help</h4><ul>
+          <li><a href="customer-care.html">Customer Care</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="connect.html">Social Media</a></li>
+        </ul></div>
+        <div><h4>Connect</h4>
+          <div class="footer-social">
+            <a href="connect.html" aria-label="Connect to our social media"><img src="images/connect.png" alt="Social media"></a>
+            <a href="customer-care.html" aria-label="Customer care"><img src="images/customer-care.png" alt="Customer care"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="static/js/header.js"></script>
+    <script src="static/js/reveal.js"></script>
+    <script src="static/js/cart.js"></script>
+    <script src="static/js/wishlist.js"></script>
+    <script src="static/js/products.js"></script>
+    <script src="static/js/listing.js"></script>
   </body>
 </html>

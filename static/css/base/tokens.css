@@ -1,0 +1,30 @@
+/* Design tokens: change colours, fonts and spacing here and the whole site follows. */
+:root {
+  /* Colour */
+  --brand: #724141;
+  --brand-dark: #4a2a28;
+  --brand-darker: #2e1a18;
+  --accent: #c28b44;
+  --accent-soft: #f3e6d2;
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --ink: #2b1f1d;
+  --muted: #7a6b66;
+  --line: #eadfd3;
+  --success: #3f7d4e;
+
+  /* Type */
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Tahoma, sans-serif;
+  --font-head: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* Shape and depth */
+  --radius: 16px;
+  --radius-lg: 28px;
+  --shadow-sm: 0 2px 8px rgba(74, 42, 40, .06);
+  --shadow-md: 0 14px 34px rgba(74, 42, 40, .14);
+
+  /* Layout and motion */
+  --container: 1280px;
+  --header-h: 72px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
